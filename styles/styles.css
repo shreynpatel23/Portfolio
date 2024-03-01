@@ -55,6 +55,17 @@ a {
     cursor: pointer;
 }
 
+.medium-ghost-button {
+    padding: 0.8em 2em;
+    background: transparent;
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--primary-color);
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 .img-responsive {
     max-width: 100%;
     height: auto;
@@ -209,13 +220,9 @@ a {
 }
 
 .button-wrapper {
-    margin-top: 2em;
     display: flex;
     align-items: center;
-}
-
-.button-wrapper>button {
-    margin-right: 1.5em;
+    gap: 30px;
 }
 
 .tech-stack-wrapper {
@@ -268,9 +275,17 @@ a {
     color: var(--primary-color);
 }
 
+.heading4 {
+    font-size: 1.5em;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0;
+    color: var(--primary-color);
+}
+
 .about-text {
-    font-size: 1.2em;
-    line-height: 1.8;
+    font-size: 1.1em;
+    line-height: 1.5;
     font-weight: 400;
     color: var(--primary-color);
 }
@@ -284,10 +299,6 @@ a {
 .about-text-wrapper {
     width: 65%;
     max-width: 600px;
-}
-
-.button-wrapper>a {
-    margin: 1em;
 }
 
 /* about style ends here  */

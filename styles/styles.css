@@ -1,7 +1,7 @@
 :root {
     --accent-color: #FF8080;
     --primary-color: #412E2E;
-    --secondary-color: #897E7E;
+    --secondary-color: #333;
     --primary-background-color: #FFF0DE;
     --active-testimonial-color: #FFCF96;
     --white: #ffffff;
@@ -22,6 +22,11 @@ a {
 }
 
 /* common styles  */
+.strong {
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
 .large-primary-button {
     padding: 0.8em 2em;
     background-color: var(--accent-color);
@@ -83,7 +88,8 @@ a {
     display: flex;
     align-items: center;
     padding: 1em 2em;
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 3;
 }
 
@@ -109,7 +115,7 @@ a {
 .nav-link {
     font-size: 1em;
     font-weight: 400;
-    color: var(--secondary-color);
+    color: var(--primary-color-color);
 }
 
 .nav-link:hover {
@@ -326,12 +332,12 @@ a {
 .project_group {
     margin: 3em 0 8em;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 30px;
 }
 
 .project_image_container {
-    width: 35%;
+    width: 30%;
 }
 
 .project_text_container {
@@ -388,6 +394,23 @@ a {
 
 .tech-stack-image {
     height: 60px;
+}
+
+.technology-tag-wrapper {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 2.5em;
+}
+
+.technology-tag {
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    color: var(--primary-color);
+    background-color: var(--primary-background-color);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 /* projects style ends here  */
@@ -586,6 +609,7 @@ input::placeholder, textarea::placeholder {
 
     .project_image_container {
         width: 100%;
+        order: 1;
     }
 
     .project_text_container {
@@ -593,12 +617,11 @@ input::placeholder, textarea::placeholder {
         max-width: 100%;
     }
 
-    .project_image_container {
-        order: 1;
-    }
-
     .project_text_container {
         order: 2;
+    }
+    .technology-tag {
+        font-size: 1em;
     }
     /* projects styles ends here  */
 
@@ -697,6 +720,9 @@ input::placeholder, textarea::placeholder {
         line-height: 1.5;
     }
 
+    .technology-tag {
+        font-size: 0.8em;
+    }
     /* project styles ends here  */
 
     /* contact styles starts here  */

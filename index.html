@@ -3,683 +3,551 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/styles.css" />
-    <!-- import fonts here  -->
+    <title>Shrey Patel · Engineering Manager and Senior Frontend Engineer</title>
+    <meta
+      name="description"
+      content="Shrey Patel builds production React and Next.js products and leads the engineers who ship them. Seven years, from first frontend hire to an 18-person engineering team."
+    />
+    <meta property="og:title" content="Shrey Patel · Frontend engineer, engineering manager" />
+    <meta
+      property="og:description"
+      content="Seven years of React, Next.js and TypeScript in production. Selected work: Surfacemap, Oro AI, Rategate, Awayme, PharmaTrack."
+    />
+    <meta property="og:url" content="https://shreynpatel.com/" />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0b0b0c" />
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <title>Shrey Patel</title>
+    <link rel="stylesheet" href="styles/styles.css?v=17" />
+    <script>
+      // Hide animated content only when motion is allowed; show it anyway if scripts fail to load.
+      if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        document.documentElement.classList.add("js");
+        setTimeout(function () {
+          if (!window.__motionReady) document.documentElement.classList.remove("js");
+        }, 3000);
+      }
+    </script>
   </head>
 
   <body>
-    <!-- header section starts here  -->
-    <header class="header">
-      <!-- logo  -->
-      <a href="#main">
-        <img
-          src="images/logo.png"
-          alt="logo of Shrey Patel portfolio"
-          class="logo"
-        />
-      </a>
-      <div class="hamburger">
-        <img
-          src="images/Hamburger.svg"
-          alt="Hamburger icon for showing the mobile menu"
-          class="icon"
-        />
-        <div class="mobile_menu">
-          <nav class="mobile_nav">
-            <ul class="mobile_nav-list">
-              <li class="mobile_nav-list-item">
-                <a href="#main" class="nav-link">Home</a>
-              </li>
-              <li class="mobile_nav-list-item">
-                <a href="#about" class="nav-link">About</a>
-              </li>
-              <li class="mobile_nav-list-item">
-                <a href="#projects" class="nav-link">Projects</a>
-              </li>
-              <li class="mobile_nav-list-item">
-                <a href="#contact" class="nav-link">Contact</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <nav class="nav">
-        <ul class="nav-list">
-          <li class="nav-list-item">
-            <a href="#main" class="nav-link">Home</a>
-          </li>
-          <li class="nav-list-item">
-            <a href="#about" class="nav-link">About</a>
-          </li>
-          <li class="nav-list-item">
-            <a href="#projects" class="nav-link">Projects</a>
-          </li>
-          <li class="nav-list-item">
-            <a href="#contact" class="nav-link">Contact</a>
-          </li>
+    <a class="skip" href="#work">Skip to work</a>
+    <div class="progress" aria-hidden="true"><span></span></div>
+    <div class="spotlight" aria-hidden="true"></div>
+
+    <!-- NAV -->
+    <header class="nav">
+      <a href="#top" class="nav__mark" aria-label="shreynpatel.com, back to top">shreynpatel<span>.com</span></a>
+      <nav aria-label="Primary">
+        <ul class="nav__links">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#approach">Approach</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <a href="Shrey_Patel_Resume.pdf" download="Shrey-Patel-Resume.pdf" class="btn btn--small magnetic">Resume</a>
     </header>
-    <!-- header section ends here  -->
-    <!-- main section starts here  -->
-    <main class="main" id="main">
-      <div class="main-container">
-        <div class="text-wrapper" id="text-container">
-          <p class="body-text">👋🏻 Hi, I am</p>
-          <h1 class="header-text">Shrey Patel</h1>
-          <p class="body-text" style="margin-bottom: 2em">
-            a passionate
-            <strong class="strong"> Frontend Developer </strong> based out of
-            Mississauga, Ontario
-          </p>
-          <a href="#contact" type="button" class="large-primary-button">
-            Get In Touch
-          </a>
-          <a
-            href="Shrey_Patel_Resume.pdf"
-            target="_blank"
-            download="Shrey Patel Resume"
-            type="button"
-            class="large-ghost-button"
-          >
-            Download Resume
-          </a>
-        </div>
-        <div class="image-wrapper" id="image-container">
-          <img
-            src="images/hero-illustration.png"
-            alt="hero section image of shrey patel"
-            class="img-responsive"
-          />
-        </div>
-      </div>
-      <!-- skills section starts here  -->
-      <div class="skills-container">
-        <div class="skills-wrapper">
-          <h4 class="heading4">Skills</h4>
-          <!-- <p class="helper_text">A sneak peak into my work</p> -->
-          <div class="tech-stack-image-wrapper">
-            <div style="--time: 15s">
-              <span class="label">
-                <img
-                  src="images/html.svg"
-                  alt="HTML image for skills"
-                  class="tech-stack-image"
-                />
-                <p class="skill-name">HTML 5</p>
-              </span>
-              <span class="label">
-                <img
-                  src="images/css.svg"
-                  alt="CSS image for skills"
-                  class="tech-stack-image"
-                />
-                <p class="skill-name">CSS 3</p>
-              </span>
-              <span class="label">
-                <img
-                  src="images/js.svg"
-                  alt="JS image for skills"
-                  class="tech-stack-image"
-                />
-                <p class="skill-name">Javascript</p>
-              </span>
-              <span class="label">
-                <img
-                  src="images/typescript.svg"
-                  alt="Typescript image for skills"
-                  class="tech-stack-image"
-                />
-                <p class="skill-name">Typescript</p>
-              </span>
-              <span class="label">
-                <img
-                  src="images/react.svg"
-                  alt="React image for skills"
-                  class="tech-stack-image"
-                />
-                <p class="skill-name">React JS</p>
-              </span>
-              <span class="label">
-                <img
-                  src="images/next_js.png"
-                  alt="NEXT JS image for skills"
-                  class="tech-stack-image"
-                />
-                <p class="skill-name">Next JS</p>
-              </span>
-              <span class="label">
-                <img
-                  src="images/angular.png"
-                  alt="Angular image for skills"
-                  class="tech-stack-image"
-                />
-                <p class="skill-name">Angular</p>
-              </span>
-              <span class="label">
-                <img
-                  src="images/node_js.png"
-                  alt="Node JS image for skills"
-                  class="tech-stack-image"
-                />
-                <p class="skill-name">Node JS</p>
-              </span>
-              <span class="label">
-                <img
-                  src="images/express_js.webp"
-                  alt="Express JS image for skills"
-                  class="tech-stack-image"
-                  style="height: 50px"
-                />
-                <p class="skill-name">Express JS</p>
-              </span>
-              <span class="label">
-                <img
-                  src="images/php.png"
-                  alt="Php image for skills"
-                  class="tech-stack-image"
-                />
-                <p class="skill-name">PHP</p>
-              </span>
-              <span class="label">
-                <img
-                  src="images/tailwindCSS.png"
-                  alt="Tailwind CSS image for skills"
-                  class="tech-stack-image"
-                />
-                <p class="skill-name">Tailwind CSS</p>
-              </span>
-              <span class="label">
-                <img
-                  src="images/bootstrap.png"
-                  alt="Bootstrap image for skills"
-                  class="tech-stack-image"
-                />
-                <p class="skill-name">Bootstrap</p>
-              </span>
-              <span class="label">
-                <img
-                  src="images/saas.png"
-                  alt="SAAS image for skills"
-                  class="tech-stack-image"
-                />
-                <p class="skill-name">SAAS</p>
-              </span>
-              <span class="label">
-                <img
-                  src="images/git.png"
-                  alt="Git image for skills"
-                  class="tech-stack-image"
-                />
-                <p class="skill-name">Git</p>
-              </span>
-            </div>
-            <div style="--time: 15s">
-              <span class="label">
-                <img
-                  src="images/html.svg"
-                  alt="HTML image for skills"
-                  class="tech-stack-image"
-                />
-                <p class="skill-name">HTML 5</p>
-              </span>
-              <span class="label">
-                <img
-                  src="images/css.svg"
-                  alt="CSS image for skills"
-                  class="tech-stack-image"
-                />
-                <p class="skill-name">CSS 3</p>
-              </span>
-              <span class="label">
-                <img
-                  src="images/js.svg"
-                  alt="JS image for skills"
-                  class="tech-stack-image"
-                />
-                <p class="skill-name">Javascript</p>
-              </span>
-              <span class="label">
-                <img
-                  src="images/typescript.svg"
-                  alt="Typescript image for skills"
-                  class="tech-stack-image"
-                />
-                <p class="skill-name">Typescript</p>
-              </span>
-              <span class="label">
-                <img
-                  src="images/react.svg"
-                  alt="React image for skills"
-                  class="tech-stack-image"
-                />
-                <p class="skill-name">React JS</p>
-              </span>
-              <span class="label">
-                <img
-                  src="images/next_js.png"
-                  alt="NEXT JS image for skills"
-                  class="tech-stack-image"
-                />
-                <p class="skill-name">Next JS</p>
-              </span>
-              <span class="label">
-                <img
-                  src="images/angular.png"
-                  alt="Angular image for skills"
-                  class="tech-stack-image"
-                />
-                <p class="skill-name">Angular</p>
-              </span>
-              <span class="label">
-                <img
-                  src="images/node_js.png"
-                  alt="Node JS image for skills"
-                  class="tech-stack-image"
-                />
-                <p class="skill-name">Node JS</p>
-              </span>
-              <span class="label">
-                <img
-                  src="images/express_js.webp"
-                  alt="Express JS image for skills"
-                  class="tech-stack-image"
-                  style="height: 50px"
-                />
-                <p class="skill-name">Express JS</p>
-              </span>
-              <span class="label">
-                <img
-                  src="images/php.png"
-                  alt="Php image for skills"
-                  class="tech-stack-image"
-                />
-                <p class="skill-name">PHP</p>
-              </span>
-              <span class="label">
-                <img
-                  src="images/tailwindCSS.png"
-                  alt="Tailwind CSS image for skills"
-                  class="tech-stack-image"
-                />
-                <p class="skill-name">Tailwind CSS</p>
-              </span>
-              <span class="label">
-                <img
-                  src="images/bootstrap.png"
-                  alt="Bootstrap image for skills"
-                  class="tech-stack-image"
-                />
-                <p class="skill-name">Bootstrap</p>
-              </span>
-              <span class="label">
-                <img
-                  src="images/saas.png"
-                  alt="SAAS image for skills"
-                  class="tech-stack-image"
-                />
-                <p class="skill-name">SAAS</p>
-              </span>
-              <span class="label">
-                <img
-                  src="images/git.png"
-                  alt="Git image for skills"
-                  class="tech-stack-image"
-                />
-                <p class="skill-name">Git</p>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- skills section ends here  -->
-    </main>
-    <!-- main section ends here  -->
-    <!-- about section starts here -->
-    <section class="about" id="about">
-      <div class="about-container">
-        <div class="about-image-wrapper">
-          <img
-            src="images/About-illustration.svg"
-            alt="shrey patel professional photograph"
-            class="img-responsive"
-          />
-        </div>
-        <div class="about-text-wrapper">
-          <h2 class="heading2">About</h2>
-          <p class="about-text">
-            Hello! I'm Shrey Patel, a Senior Frontend Engineer with 5 years of
-            experience in driving intuitive user experience. I have a strong
-            background in developing web applications using various technologies
-            and frameworks, including React JS, Next JS, Express JS, Node JS,
-            MongoDB, Tailwind CSS, CSS3, HTML5, and Bootstrap.
-          </p>
-          <div class="button-wrapper">
-            <a
-              href="Shrey_Patel_Resume.pdf"
-              download="Shrey Patel Resume"
-              target="_blank"
-              type="button"
-              class="large-primary-button"
-            >
-              View Resume
-            </a>
-            <a
-              href="https://www.linkedin.com/in/shrey-patel-573087189/"
-              target="_blank"
-            >
-              <img
-                src="images/linkedin.svg"
-                alt="LinkedIn image"
-                class="icon"
-              />
-            </a>
-            <a href="https://github.com/shreynpatel23" target="_blank">
-              <img src="images/github.svg" alt="GitHub image" class="icon" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- about section ends here -->
-    <!-- projects section starts here -->
-    <section class="projects" id="projects">
-      <div class="projects-container">
-        <h2 class="heading2">Projects</h2>
-        <p class="helper_text">A sneak peak into my work</p>
-        <!-- PHARMATRACK PLATFORM  -->
-        <div class="project_group">
-          <div class="project_image_container">
-            <img
-              src="images/Pharmatrack.png"
-              alt="Pharmatrack Thumbnail picture"
-              class="img-responsive"
-            />
-          </div>
-          <div class="project_text_container">
-            <p class="project_title">
-              Pharmatrack - Inventory Management System
-            </p>
-            <p class="project_about">
-              Pharmatrack is a comprehensive inventory management system
-              tailored for local shopkeepers selling medicines. It enables users
-              to create accounts, efficiently manage products, track orders,
-              handle supplier details, and oversee user roles. The system
-              streamlines operations, ensuring accurate inventory and smooth
-              workflows. Designed for simplicity and reliability, Pharmatrack
-              empowers shopkeepers to focus on their business growth.
-            </p>
-            <div class="technology-tag-wrapper">
-              <div class="technology-tag">Next JS</div>
-              <div class="technology-tag">Typescript</div>
-              <div class="technology-tag">Javascript ES6</div>
-              <div class="technology-tag">Node JS</div>
-              <div class="technology-tag">Express JS</div>
-              <div class="technology-tag">Mongo DB</div>
-            </div>
-            <a
-              target="_blank"
-              href="https://pharma-track-five.vercel.app/"
-              type="button"
-              class="medium-primary-button"
-            >
-              Visit Website
-            </a>
-            <a
-              target="_blank"
-              href="https://github.com/shreynpatel23/PharmaTrack"
-              type="button"
-              class="medium-ghost-button"
-            >
-              View on GitHub
-            </a>
-          </div>
-        </div>
-        <!-- SPOTIFY DRAG AND DROP PLATFORM   -->
-        <!-- <div class="project_group">
-          <div class="project_image_container">
-            <img
-              src="images/spotify-drag-and-drop.png"
-              alt="Spotify Drag and Drop thumbnai picture"
-              class="img-responsive"
-            />
-          </div>
-          <div class="project_text_container">
-            <p class="project_title">Spotify Playlist - Drag and Drop</p>
-            <p class="project_about">
-              An application that lists all the featured playlists of Spotify on
-              a page. It has a two-column layout where on the left side there is
-              a list of playlists fetched from Spotify, and on the right side,
-              the playlists you have already saved. You can drag and drop the
-              playlists from left to right to add them to your saved playlists.
-            </p>
-            <div class="technology-tag-wrapper">
-              <div class="technology-tag">React JS</div>
-              <div class="technology-tag">React Hooks</div>
-              <div class="technology-tag">Typescript</div>
-              <div class="technology-tag">SAAS</div>
-              <div class="technology-tag">JS Events</div>
-            </div>
-            <a
-              target="_blank"
-              href="https://hb1o7.csb.app/"
-              type="button"
-              class="medium-primary-button"
-            >
-              Visit Website
-            </a>
-            <a
-              target="_blank"
-              href="https://github.com/shreynpatel23/spotify-drag-and-drop"
-              type="button"
-              class="medium-ghost-button"
-            >
-              View on GitHub
-            </a>
-          </div>
-        </div> -->
-        <!-- SHOPTRADE E_COMMERCE PLATFORM  -->
-        <div class="project_group">
-          <div class="project_image_container">
-            <img
-              src="images/shoptrade-image.png"
-              alt="Shoptrade E-commerce Platform project thumbnai picture"
-              class="img-responsive"
-            />
-          </div>
-          <div class="project_text_container">
-            <p class="project_title">ShopTrade E-Commerce Application</p>
-            <p class="project_about">
-              This is a single-page application which lists some e-commerce
-              products. These products are coming from the Shopify API. You can
-              filter the products based on different categories and have the
-              ability to sort them. You can also add the products to the cart.
-            </p>
-            <div class="technology-tag-wrapper">
-              <div class="technology-tag">React JS</div>
-              <div class="technology-tag">Context API</div>
-              <div class="technology-tag">React Hooks</div>
-              <div class="technology-tag">Typescript</div>
-              <div class="technology-tag">HTML 5</div>
-              <div class="technology-tag">CSS 3</div>
-            </div>
-            <a
-              target="_blank"
-              href="https://pd17p.csb.app/"
-              type="button"
-              class="medium-primary-button"
-            >
-              Visit Website
-            </a>
-            <a
-              target="_blank"
-              href="https://github.com/shreynpatel23/shopTrade"
-              type="button"
-              class="medium-ghost-button"
-            >
-              View on GitHub
-            </a>
-          </div>
-        </div>
-        <!-- BURGER BUILDER APPLICATION  -->
-        <div class="project_group">
-          <div class="project_image_container">
-            <img
-              src="images/burger-genius-image.png"
-              alt="Burger Genius Application thumbnai picture"
-              class="img-responsive"
-            />
-          </div>
-          <div class="project_text_container">
-            <p class="project_title">Burger Genius</p>
-            <p class="project_about">
-              A single-page application written in native JavaScript and jQuery.
-              This application was made in half an hour in a hackathon
-              competition. It allows you to customize your burger and provides
-              you with the final total for your order.
-            </p>
-            <div class="technology-tag-wrapper">
-              <div class="technology-tag">HTML 5</div>
-              <div class="technology-tag">CSS 3</div>
-              <div class="technology-tag">Javascript</div>
-              <div class="technology-tag">Jquery</div>
-            </div>
-            <a
-              target="_blank"
-              href="https://shreynpatel23.github.io/burger-builder/"
-              type="button"
-              class="medium-primary-button"
-            >
-              Visit Website
-            </a>
-            <a
-              target="_blank"
-              href="https://github.com/shreynpatel23/burger-builder"
-              type="button"
-              class="medium-ghost-button"
-            >
-              View on GitHub
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- projects section ends here -->
-    <!-- contact section starts here -->
-    <section class="contact" id="contact">
-      <div class="contact-container">
-        <h2 class="heading2">Contact</h2>
-        <p class="helper_text">Don’t be shy, Hit me up!</p>
-        <div class="contact_content_wrapper">
-          <div class="form_wrapper">
-            <form
-              action="mailto:shreynpatel23@gmail.com"
-              method="get"
-              enctype="text/plain"
-              name="contact_form"
-            >
-              <div class="form_element">
-                <label for="name" class="form_label">Name</label>
-                <input
-                  required
-                  type="text"
-                  id="name"
-                  name="name"
-                  class="form_input"
-                  placeholder="Enter your name here"
-                />
-              </div>
-              <div class="form_element">
-                <label for="email" class="form_label">Email</label>
-                <input
-                  required
-                  type="email"
-                  id="email"
-                  name="email"
-                  class="form_input"
-                  placeholder="Enter your email here"
-                />
-              </div>
-              <div class="form_element">
-                <label for="message" class="form_label">Message</label>
-                <textarea
-                  required
-                  rows="5"
-                  cols="4"
-                  id="message"
-                  class="form_input"
-                  name="message"
-                  placeholder="Enter your message here"
-                ></textarea>
-              </div>
-              <button type="submit" class="large-primary-button">
-                Send Message
-              </button>
-              <button type="reset" class="large-ghost-button">
-                Clear Form
-              </button>
-            </form>
-          </div>
-          <div class="contact_divider"></div>
-          <div class="contact_elements_wrapper">
-            <div class="contact_element_wrapper">
-              <img src="images/phone.svg" alt="phone icon" class="icon" />
-              <div class="text_wrapper">
-                <p class="element_label">Phone</p>
-                <p class="element_value">343-558-7428</p>
-              </div>
-            </div>
-            <div class="contact_element_wrapper">
-              <img src="images/Mail.svg" alt="email icon" class="icon" />
-              <div class="text_wrapper">
-                <p class="element_label">Email</p>
-                <p class="element_value">shreynpatel23@gmail.com</p>
-              </div>
-            </div>
-            <div class="contact_element_wrapper">
-              <img src="images/Location.svg" alt="location icon" class="icon" />
-              <div class="text_wrapper">
-                <p class="element_label">Address</p>
-                <p class="element_value line_break">
-                  3525 Brandon Gate Dr, Mississauga, ON, L4T 3M3.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- contact section ends here -->
-    <!-- footer starts here -->
-    <footer class="footer">
-      <p class="footer_text">Copyright © 2024, All rights are reserved</p>
-      <a
-        href="https://www.linkedin.com/in/shrey-patel-573087189/"
-        target="_blank"
-      >
-        <img
-          src="images/linkedin-white.svg"
-          alt="LinkedIn image"
-          class="social-icon"
-        />
-      </a>
-      <a href="https://github.com/shreynpatel23" target="_blank">
-        <img
-          src="images/github-white.svg"
-          alt="GitHub image"
-          class="social-icon"
-        />
-      </a>
-    </footer>
-    <!-- footer ends here  -->
 
-    <script src="index.js"></script>
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="grid-bg" aria-hidden="true"></div>
+        <div class="orb orb--a" aria-hidden="true"></div>
+        <div class="orb orb--b" aria-hidden="true"></div>
+
+        <div class="hero__inner">
+          <p class="eyebrow reveal-up">
+            <span class="dot"></span> Engineering Manager · Senior Frontend Engineer
+          </p>
+          <h1 class="hero__title">
+            <span class="line"><span class="split">Shrey Patel</span></span>
+          </h1>
+          <p class="hero__lede">
+            I build systems people
+            <em class="serif">rely on</em>, and the teams that
+            <span class="rotator" aria-live="polite"><span class="rotator__word">ship them.</span></span>
+          </p>
+          <p class="hero__sub reveal-up">
+            Seven years of React, Next.js and TypeScript in production. From a startup's first
+            frontend hire to leading 18 engineers across web, backend, mobile and DevOps.
+          </p>
+          <div class="hero__cta reveal-up">
+            <a href="#work" class="btn btn--accent magnetic">See selected work <span aria-hidden="true">↓</span></a>
+            <a href="mailto:shreynpatel23@gmail.com" class="btn btn--ghost magnetic">shreynpatel23@gmail.com</a>
+          </div>
+        </div>
+
+        <dl class="stats">
+          <div class="stat">
+            <dt>Years shipping</dt>
+            <dd><span class="count" data-to="7">7</span>+</dd>
+          </div>
+          <div class="stat">
+            <dt>Engineers I lead</dt>
+            <dd><span class="count" data-to="18">18</span></dd>
+          </div>
+          <div class="stat">
+            <dt>SaaS shipped solo</dt>
+            <dd><span class="count" data-to="4">4</span></dd>
+          </div>
+          <div class="stat">
+            <dt>Leads on a platform I built</dt>
+            <dd><span class="count" data-to="8">8</span>M+</dd>
+          </div>
+        </dl>
+
+        <div class="scroll-cue" aria-hidden="true"><span></span></div>
+      </section>
+
+      <!-- MARQUEE -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>React</span><i>✦</i><span>Next.js</span><i>✦</i><span>TypeScript</span><i>✦</i>
+          <span>Design systems</span><i>✦</i><span>Real-time UI</span><i>✦</i><span>LLM products</span><i>✦</i>
+          <span>Agentic workflows</span><i>✦</i><span>Team leadership</span><i>✦</i>
+          <span>React</span><i>✦</i><span>Next.js</span><i>✦</i><span>TypeScript</span><i>✦</i>
+          <span>Design systems</span><i>✦</i><span>Real-time UI</span><i>✦</i><span>LLM products</span><i>✦</i>
+          <span>Agentic workflows</span><i>✦</i><span>Team leadership</span><i>✦</i>
+        </div>
+      </div>
+
+      <!-- WORK -->
+      <section class="work" id="work">
+        <header class="section-head">
+          <p class="kicker">01 · Selected work</p>
+          <h2 class="section-title split-lines">Products I designed, built and shipped.</h2>
+          <p class="section-sub reveal-up">
+            Four products built for clients as the sole or lead engineer, and the capstone that started it.
+            The visuals are illustrations I built in code, not screenshots of client systems.
+          </p>
+        </header>
+
+        <div class="stack">
+          <!-- SURFACEMAP -->
+          <article class="card" style="--hue: 280">
+            <div class="card__text">
+              <div class="card__meta">
+                <span class="tag">Client · CC Marketing Group</span>
+                <span class="mono">01 / 05</span>
+              </div>
+              <h3 class="card__title">Surfacemap</h3>
+              <p class="card__tagline">Brand perception across four LLMs, for agencies.</p>
+              <p class="card__body">
+                Each analysis sends 20 questions to four models, 80 calls per run, and scores every
+                model from 0 to 100. I was the sole engineer, and I designed how the data is shown:
+                a heatmap of each model by funnel stage, a treemap of the sources models cite, and a
+                timeline of how standing drifts.
+              </p>
+              <ul class="card__points">
+                <li>Runs execute as durable background workflows that retry when stuck</li>
+                <li>Reworked scoring when hallucinating models gave near-identical results</li>
+              </ul>
+              <p class="card__aside">I built the same for India as my own product: <a href="https://promptsight.in" target="_blank" rel="noopener">promptsight.in</a></p>
+              <a class="link-arrow" href="https://surfacemap.cc" target="_blank" rel="noopener">surfacemap.cc <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="card__visual" aria-hidden="true">
+              <div class="viz viz--heat">
+                <div class="viz__head"><span>Model × stage</span><span class="mono">sample data</span></div>
+                <div class="heat">
+                  <span></span><b>Aware</b><b>Consider</b><b>Decide</b><b>Value</b>
+                  <b>GPT</b><i style="--v:.9"></i><i style="--v:.7"></i><i style="--v:.55"></i><i style="--v:.4"></i>
+                  <b>Claude</b><i style="--v:.75"></i><i style="--v:.8"></i><i style="--v:.6"></i><i style="--v:.5"></i>
+                  <b>Gemini</b><i style="--v:.5"></i><i style="--v:.45"></i><i style="--v:.7"></i><i style="--v:.3"></i>
+                  <b>Perplx</b><i style="--v:.65"></i><i style="--v:.35"></i><i style="--v:.5"></i><i style="--v:.85"></i>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ORO AI -->
+          <article class="card" style="--hue: 200">
+            <div class="card__text">
+              <div class="card__meta">
+                <span class="tag">Client · Oro AI</span>
+                <span class="mono">02 / 05</span>
+              </div>
+              <h3 class="card__title">Oro AI · Interview module</h3>
+              <p class="card__tagline">AI interview practice, and help during the real one.</p>
+              <p class="card__body">
+                Oro AI is a US job-search platform. I built its Interview module end to end: mock
+                interviews tailored to the role with feedback after every answer, a live co-pilot that
+                suggests answers during a real interview, and a history of past sessions with transcripts
+                and code.
+              </p>
+              <ul class="card__points">
+                <li>Practice, live co-pilot and history as one module</li>
+                <li>Real-time UI that keeps pace with a live conversation</li>
+              </ul>
+              <a class="link-arrow" href="https://www.oroai.co/" target="_blank" rel="noopener">oroai.co <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="card__visual" aria-hidden="true">
+              <div class="viz viz--chat">
+                <div class="viz__head"><span>Mock interview · Frontend</span><span class="live"><b></b>live</span></div>
+                <div class="msg msg--q">Walk me through how you'd debug a slow React page.</div>
+                <div class="msg msg--a">
+                  <div class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                </div>
+                <div class="copilot"><span class="mono">co-pilot</span><span class="typing">Start with the Profiler, then check re-renders…</span></div>
+                <div class="feedback">
+                  <div><span>Structure</span><b style="--w: 82%"></b></div>
+                  <div><span>Depth</span><b style="--w: 64%"></b></div>
+                  <div><span>Clarity</span><b style="--w: 90%"></b></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- RATEGATE -->
+          <article class="card" style="--hue: 32">
+            <div class="card__text">
+              <div class="card__meta">
+                <span class="tag">Client · CC Marketing Group</span>
+                <span class="mono">03 / 05</span>
+              </div>
+              <h3 class="card__title">Rategate</h3>
+              <p class="card__tagline">A QR code on the table, a review on Google.</p>
+              <p class="card__body">
+                Restaurants onboard themselves and get a QR code for each location. Diners scan it and
+                go through a five-step flow: low ratings are routed to private feedback, and happy
+                diners can publish their review straight to Google and Facebook.
+              </p>
+              <ul class="card__points">
+                <li>Publishing through the Google Business Profile and Facebook Graph APIs</li>
+                <li>Tiered plans with Stripe billing</li>
+              </ul>
+              <a class="link-arrow" href="https://reviews.rategate.cc" target="_blank" rel="noopener">reviews.rategate.cc <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="card__visual" aria-hidden="true">
+              <div class="viz viz--phone">
+                <div class="qr"></div>
+                <div class="phone">
+                  <div class="steps"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div>
+                  <p>How was dinner?</p>
+                  <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                  <div class="share"><span>Google</span><span>Facebook</span></div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- AWAYME -->
+          <article class="card" style="--hue: 150">
+            <div class="card__text">
+              <div class="card__meta">
+                <span class="tag">Client · CC Marketing Group</span>
+                <span class="mono">04 / 05</span>
+              </div>
+              <h3 class="card__title">Awayme</h3>
+              <p class="card__tagline">A busy calendar builds credibility.</p>
+              <p class="card__body">
+                Freelancers share booking links with clients. Awayme fills their Google or Outlook
+                calendar with placeholder events at a density they choose, so they never look idle.
+                I caught a time-zone bug before launch by having a tester in India book against my
+                Canadian calendar, and added per-user time zones.
+              </p>
+              <ul class="card__points">
+                <li>Google Calendar and Microsoft Graph integrations with OAuth</li>
+                <li>Free and paid plans with configurable range and density</li>
+              </ul>
+              <a class="link-arrow" href="https://awayme.app" target="_blank" rel="noopener">awayme.app <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="card__visual" aria-hidden="true">
+              <div class="viz viz--cal">
+                <div class="viz__head"><span>This week</span><span class="mono">density <b class="count" data-to="60">60</b>%</span></div>
+                <div class="cal">
+                  <b>M</b><b>T</b><b>W</b><b>T</b><b>F</b>
+                  <i class="e" style="--r:1/3"></i><i></i><i class="e" style="--r:2/4"></i><i></i><i class="e" style="--r:1/2"></i>
+                  <i></i><i class="e" style="--r:3/5"></i><i></i><i class="e" style="--r:1/4"></i><i></i>
+                  <i class="e" style="--r:4/6"></i><i></i><i class="e" style="--r:5/7"></i><i></i><i class="e" style="--r:3/6"></i>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!-- PHARMATRACK -->
+          <article class="card" style="--hue: 340">
+            <div class="card__text">
+              <div class="card__meta">
+                <span class="tag">Capstone · 1 week</span>
+                <span class="mono">05 / 05</span>
+              </div>
+              <h3 class="card__title">PharmaTrack</h3>
+              <p class="card__tagline">Medicine inventory for the corner pharmacy.</p>
+              <p class="card__body">
+                An inventory management system for local shopkeepers who sell medicines. They create an
+                account, manage products and stock, track orders, keep supplier details and control user
+                roles. My capstone project, built in one week in Next.js.
+              </p>
+              <ul class="card__points">
+                <li>Products, orders, suppliers and roles in one app</li>
+                <li>Next.js, TypeScript, Tailwind and MongoDB</li>
+              </ul>
+              <div class="card__links">
+                <a class="link-arrow" href="https://pharma-track-five.vercel.app/" target="_blank" rel="noopener">Live app <span aria-hidden="true">↗</span></a>
+                <a class="link-arrow" href="https://github.com/shreynpatel23/PharmaTrack" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+            <div class="card__visual" aria-hidden="true">
+              <div class="viz viz--stock">
+                <div class="viz__head"><span>Inventory</span><span class="mono">sample data</span></div>
+                <div class="stock">
+                  <div class="stock__row"><span>Paracetamol 500</span><i style="--w: 82%"></i><b>164</b></div>
+                  <div class="stock__row"><span>Amoxicillin 250</span><i style="--w: 46%"></i><b>92</b></div>
+                  <div class="stock__row is-low"><span>Cetirizine 10</span><i style="--w: 12%"></i><b>24</b><em>Low</em></div>
+                  <div class="stock__row"><span>ORS sachet</span><i style="--w: 64%"></i><b>128</b></div>
+                  <div class="stock__row is-low"><span>Insulin pen</span><i style="--w: 8%"></i><b>6</b><em>Low</em></div>
+                </div>
+                <div class="chips"><span>Products</span><span>Orders</span><span>Suppliers</span><span>Roles</span></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- APPROACH / AI WORKFLOW -->
+      <section class="approach" id="approach">
+        <header class="section-head">
+          <p class="kicker">02 · How my team ships</p>
+          <h2 class="section-title split-lines">I turned our engineering process into agents.</h2>
+          <p class="section-sub reveal-up">
+            At Oro Money I designed the Claude-based agent workflow the whole engineering team now uses.
+            We brought in TDD by writing evals first, so every agent works against a clear bar before any UI exists.
+          </p>
+        </header>
+
+        <ol class="pipeline">
+          <li class="node">
+            <span class="node__n mono">01</span>
+            <span class="node__link" aria-hidden="true"></span>
+            <h3>Test agent</h3>
+            <p>Reads the Linear ticket and acceptance criteria, studies the current system, and writes the evals and test cases first.</p>
+          </li>
+          <li class="node">
+            <span class="node__n mono">02</span>
+            <span class="node__link" aria-hidden="true"></span>
+            <h3>Figma agent</h3>
+            <p>Takes a Figma link, reuses existing components where they fit, and builds the UI with placeholder data.</p>
+          </li>
+          <li class="node">
+            <span class="node__n mono">03</span>
+            <h3>API agent</h3>
+            <p>Wires up the real APIs and runs the evals from step one against them.</p>
+          </li>
+        </ol>
+        <div class="loop">
+          <div class="loop__text">
+            <div>
+              <p class="kicker">Same idea, my own product</p>
+              <h3 class="loop__title reveal-up">PromptSight is built by an agent team I designed.</h3>
+            </div>
+            <div>
+              <p class="loop__body reveal-up">
+                An architect agent plans and splits the work. A QA agent writes failing tests first. A
+                developer agent builds each task in its own worktree. Three reviewers check the tests,
+                the UI against the design, and the code, in parallel, and nothing merges until all of
+                them pass. Failures go back to the same developer; after three rounds, they come to me.
+              </p>
+              <p class="loop__proof reveal-up"><b>40</b> pull requests shipped in four weeks</p>
+              <a class="link-arrow reveal-up" href="https://promptsight.in" target="_blank" rel="noopener">promptsight.in <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+
+          <ol class="flow" aria-label="How a PromptSight task moves through the agent team">
+            <li class="flow__stage">
+              <span class="flow__n mono">01</span>
+              <b>Spec</b>
+              <small>Architect agent plans, splits the task and asks me every open question up front</small>
+            </li>
+            <li class="flow__stage">
+              <span class="flow__n mono">02</span>
+              <b>Tests first</b>
+              <small>QA agent writes failing tests from the spec</small>
+            </li>
+            <li class="flow__stage flow__stage--build">
+              <span class="flow__n mono">03</span>
+              <b>Build</b>
+              <small>Developer agent, in its own worktree and database branch</small>
+            </li>
+            <li class="flow__stage flow__stage--review">
+              <span class="flow__n mono">04</span>
+              <b>Review ×3</b>
+              <span class="flow__chips"><i>Tests</i><i>UI vs design</i><i>Code</i></span>
+              <span class="flow__status mono"><em class="is-fail">1 finding</em><em class="is-pass">all pass</em></span>
+            </li>
+            <li class="flow__stage flow__stage--merge">
+              <span class="flow__n mono">05</span>
+              <b>Merge</b>
+              <small>Into the release branch; I approve what reaches main</small>
+            </li>
+            <li class="flow__return" aria-label="Fix loop: findings go back to the developer, up to 3 rounds, then to me">
+              <svg viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M70 1 C70 20, 50 20, 50 1" />
+              </svg>
+              <span class="mono">↺ fix · up to 3 rounds, then me</span>
+            </li>
+          </ol>
+        </div>
+        <p class="pull reveal-up">
+          <span class="serif">“</span>The lesson: with agents, tests matter more than ever. You need to know when to stop them.<span class="serif">”</span>
+        </p>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section class="experience" id="experience">
+        <header class="section-head">
+          <p class="kicker">03 · Experience</p>
+          <h2 class="section-title split-lines">From first frontend hire to engineering manager.</h2>
+        </header>
+
+        <div class="timeline">
+          <div class="timeline__line" aria-hidden="true"><span></span></div>
+
+          <article class="role">
+            <p class="role__when mono">2025 · now</p>
+            <div>
+              <h3 class="role__title">Engineering Manager <span>at Oro Money</span></h3>
+              <p class="role__sub">Senior Frontend Engineer from 07/2025, promoted to EM in 04/2026 · Gandhinagar</p>
+              <ul>
+                <li>Lead 18 engineers across frontend, backend, mobile and DevOps.</li>
+                <li>Merged three admin apps into one Next.js and TypeScript app in two weeks.</li>
+                <li>Built Ringmaster, a calling platform for 120 callers over 8M+ leads, with live call events from telephony webhooks pushed to each caller's screen.</li>
+                <li>Owned all Oro frontend before the promotion: five web apps and four websites.</li>
+                <li>Awards: High Flyer (March 2026) and Rising Star (June 2026).</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="role">
+            <p class="role__when mono">2024 · 2026</p>
+            <div>
+              <h3 class="role__title">Senior Full-Stack Developer <span>at CC Marketing Group</span></h3>
+              <p class="role__sub">Contract · Toronto, remote</p>
+              <ul>
+                <li>Sole engineer on Surfacemap, Rategate and Awayme: Next.js, MongoDB, Stripe and Upstash on Vercel.</li>
+                <li>Started as a capstone where I led a team of four, then became a paid contract.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="role">
+            <p class="role__when mono">2024</p>
+            <div>
+              <h3 class="role__title">Application Developer <span>at Humber Research &amp; Innovation</span></h3>
+              <p class="role__sub">Contract · Toronto</p>
+              <ul>
+                <li>Led frontend for a LEGO smart-city research platform; designed and built the site in two weeks, with live car tracking over WebSockets.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="role">
+            <p class="role__when mono">2022 · 2023</p>
+            <div>
+              <h3 class="role__title">Senior Frontend Developer <span>at Oro Money</span></h3>
+              <p class="role__sub">Chennai · one of the first in-house tech hires</p>
+              <ul>
+                <li>Migrated the loan ledger app from Vue to React and TypeScript and built the component library later apps reused.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="role">
+            <p class="role__when mono">2019 · 2022</p>
+            <div>
+              <h3 class="role__title">Frontend Engineer, SD1 to SD2 <span>at Zoop.one</span></h3>
+              <p class="role__sub">Employee #5 and first frontend engineer</p>
+              <ul>
+                <li>Moved the customer and admin portals from Angular to React, learning React on the job; the admin served 200+ companies.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="role role--compact">
+            <p class="role__when mono">2018 · 2019</p>
+            <div>
+              <h3 class="role__title">Frontend Contractor <span>at life.ai</span> · Junior Frontend Engineer <span>at Orcaso</span></h3>
+              <p class="role__sub">Built and published an open-source Angular component library on npm.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- EARLIER -->
+      <section class="earlier">
+        <header class="section-head section-head--row">
+          <p class="kicker">04 · Open source</p>
+        </header>
+        <ul class="rows">
+          <li class="row">
+            <a href="https://www.npmjs.com/package/@lifeai/la-ngx-library" target="_blank" rel="noopener">
+              <span class="row__name">@lifeai/la-ngx-library</span>
+              <span class="row__desc">Angular component library on npm · maintainer</span>
+              <span class="row__arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+          <li class="row">
+            <a href="https://github.com/shreynpatel23" target="_blank" rel="noopener">
+              <span class="row__name">GitHub</span>
+              <span class="row__desc">Everything else, including experiments and older work</span>
+              <span class="row__arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- STACK -->
+      <section class="stack-list" id="stack">
+        <header class="section-head section-head--row">
+          <p class="kicker">05 · Stack</p>
+        </header>
+        <dl class="skills">
+          <div class="skills__row">
+            <dt class="mono">Frontend</dt>
+            <dd>React, Next.js, TypeScript, Tailwind CSS, Redux, Material UI</dd>
+          </div>
+          <div class="skills__row">
+            <dt class="mono">Backend</dt>
+            <dd>Node.js, Express, PostgreSQL, MongoDB, REST APIs, Stripe</dd>
+          </div>
+          <div class="skills__row">
+            <dt class="mono">AI</dt>
+            <dd>Claude, GPT, Gemini and Perplexity APIs; agent and skill design</dd>
+          </div>
+          <div class="skills__row">
+            <dt class="mono">Testing &amp; delivery</dt>
+            <dd>Jest, React Testing Library, GitHub Actions, Vercel</dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="contact" id="contact">
+        <p class="kicker">06 · Contact</p>
+        <h2 class="contact__title split-lines">Building something? <em class="serif">Let's talk.</em></h2>
+        <a href="mailto:shreynpatel23@gmail.com" class="contact__mail magnetic">shreynpatel23@gmail.com <span aria-hidden="true">→</span></a>
+        <div class="contact__links">
+          <a href="https://www.linkedin.com/in/shrey-patel-573087189/" target="_blank" rel="noopener" class="magnetic">LinkedIn</a>
+          <a href="https://github.com/shreynpatel23" target="_blank" rel="noopener" class="magnetic">GitHub</a>
+          <a href="Shrey_Patel_Resume.pdf" download="Shrey-Patel-Resume.pdf" class="magnetic">Resume (PDF)</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© <span id="year">2026</span> Shrey Patel</span>
+      <span class="mono">Gandhinagar, India · <span id="clock">IST</span></span>
+      <span>Hand-built with HTML, CSS and GSAP</span>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.11/dist/lenis.min.js"></script>
+    <script src="index.js?v=6"></script>
   </body>
 </html>

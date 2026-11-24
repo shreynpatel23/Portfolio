@@ -26,6 +26,11 @@
 }
 html {
   -webkit-text-size-adjust: 100%;
+}
+/* Native smooth scrolling only without the motion script. With it, Lenis
+   smooths scrolling, and a CSS smooth scroll would break ScrollTrigger's
+   measurements after a reload mid-page (cards stuck dimmed and shrunk). */
+html:not(.js) {
   scroll-behavior: smooth;
 }
 html.lenis,
